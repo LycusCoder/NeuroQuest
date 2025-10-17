@@ -1,0 +1,19 @@
+# === Standard Unity Project Files ===
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+UserSettings/
+# Dll files
+*.dll
+*.pdb
+*.csproj
+
+# Visual Studio / IDE temporary files
+.vs/
+.vscode/
+*.sln
+
+# Cache files (Linux/macOS)
+.DS_Store

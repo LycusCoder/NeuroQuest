@@ -1,0 +1,228 @@
+[gd_scene load_steps=2 format=3 uid="uid://settings_menu_001"]
+
+[ext_resource type="Script" path="res://scripts/settings_menu.gd" id="1_settings"]
+
+[node name="SettingsMenu" type="CanvasLayer"]
+script = ExtResource("1_settings")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="SettingsContainer" type="VBoxContainer" parent="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleBar" type="HBoxContainer" parent="Panel/SettingsContainer"]
+layout_mode = 2
+
+[node name="IconCog" type="Label" parent="Panel/SettingsContainer/TitleBar"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "⚙"
+
+[node name="Title" type="Label" parent="Panel/SettingsContainer/TitleBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 32
+text = "PENGATURAN"
+
+[node name="CloseButton" type="Button" parent="Panel/SettingsContainer/TitleBar"]
+layout_mode = 2
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/SettingsContainer"]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="Panel/SettingsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Karakter" type="VBoxContainer" parent="Panel/SettingsContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="Panel/SettingsContainer/TabContainer/Karakter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Pilih Karakter"
+
+[node name="CharacterGrid" type="GridContainer" parent="Panel/SettingsContainer/TabContainer/Karakter"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="Knight" type="Button" parent="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "⚔️
+Knight"
+
+[node name="Mage" type="Button" parent="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "🔮
+Mage"
+
+[node name="Archer" type="Button" parent="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+text = "🏹
+Archer"
+
+[node name="CurrentLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Karakter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Karakter saat ini: Knight"
+horizontal_alignment = 1
+
+[node name="Gameplay" type="VBoxContainer" parent="Panel/SettingsContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="SpeedLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "Kecepatan Jalan"
+
+[node name="SpeedSlider" type="HSlider" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+min_value = 3.0
+max_value = 12.0
+step = 0.5
+value = 5.0
+
+[node name="SpeedValue" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "5.0"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+
+[node name="SprintLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "Kecepatan Lari (Sprint)"
+
+[node name="SprintSlider" type="HSlider" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+min_value = 6.0
+max_value = 20.0
+step = 0.5
+value = 10.0
+
+[node name="SprintValue" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "10.0"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+
+[node name="MouseLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "Sensitivitas Mouse"
+
+[node name="MouseSlider" type="HSlider" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+min_value = 0.001
+max_value = 0.01
+step = 0.001
+value = 0.003
+
+[node name="MouseValue" type="Label" parent="Panel/SettingsContainer/TabContainer/Gameplay"]
+layout_mode = 2
+text = "0.003"
+horizontal_alignment = 1
+
+[node name="Graphics" type="VBoxContainer" parent="Panel/SettingsContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ShadowsLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+text = "Shadows (Bayangan)"
+
+[node name="ShadowsCheck" type="CheckBox" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+button_pressed = true
+text = "Aktifkan Shadows"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+
+[node name="WorldSizeLabel" type="Label" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+text = "Ukuran World (Perlu Restart)"
+
+[node name="WorldSizeSlider" type="HSlider" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+min_value = 10.0
+max_value = 30.0
+step = 5.0
+value = 20.0
+
+[node name="WorldSizeValue" type="Label" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+text = "20"
+horizontal_alignment = 1
+
+[node name="Info" type="Label" parent="Panel/SettingsContainer/TabContainer/Graphics"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "World lebih besar = loading lebih lama
+World lebih kecil = performa lebih baik"
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/SettingsContainer"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="HBoxContainer" parent="Panel/SettingsContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="Panel/SettingsContainer/ButtonContainer"]
+layout_mode = 2
+text = "Reset ke Default"
+
+[node name="ApplyButton" type="Button" parent="Panel/SettingsContainer/ButtonContainer"]
+layout_mode = 2
+text = "Terapkan"
+
+[node name="CloseButton2" type="Button" parent="Panel/SettingsContainer/ButtonContainer"]
+layout_mode = 2
+text = "Tutup (ESC)"
+
+[connection signal="pressed" from="Panel/SettingsContainer/TitleBar/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid/Knight" to="." method="_on_character_selected" binds= ["knight"]]
+[connection signal="pressed" from="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid/Mage" to="." method="_on_character_selected" binds= ["mage"]]
+[connection signal="pressed" from="Panel/SettingsContainer/TabContainer/Karakter/CharacterGrid/Archer" to="." method="_on_character_selected" binds= ["archer"]]
+[connection signal="value_changed" from="Panel/SettingsContainer/TabContainer/Gameplay/SpeedSlider" to="." method="_on_speed_changed"]
+[connection signal="value_changed" from="Panel/SettingsContainer/TabContainer/Gameplay/SprintSlider" to="." method="_on_sprint_changed"]
+[connection signal="value_changed" from="Panel/SettingsContainer/TabContainer/Gameplay/MouseSlider" to="." method="_on_mouse_changed"]
+[connection signal="toggled" from="Panel/SettingsContainer/TabContainer/Graphics/ShadowsCheck" to="." method="_on_shadows_toggled"]
+[connection signal="value_changed" from="Panel/SettingsContainer/TabContainer/Graphics/WorldSizeSlider" to="." method="_on_world_size_changed"]
+[connection signal="pressed" from="Panel/SettingsContainer/ButtonContainer/ResetButton" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Panel/SettingsContainer/ButtonContainer/ApplyButton" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="Panel/SettingsContainer/ButtonContainer/CloseButton2" to="." method="_on_close_button_pressed"]

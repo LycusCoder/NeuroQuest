@@ -1,0 +1,116 @@
+🏰 MEDIEVAL EXPLORER - PROJECT STRUCTURE
+═══════════════════════════════════════════════
+
+/app/
+│
+├── 🎮 GAME FILES
+│   ├── project.godot                 ← Godot project config (MAIN FILE)
+│   ├── export_presets.cfg            ← Export settings
+│   └── icon.png                      ← Project icon
+│
+├── 🎬 SCENES (scenes/)
+│   ├── main.tscn                     ← Main game scene (basic)
+│   ├── main_improved.tscn            ← Main game scene (enhanced)
+│   ├── player.tscn                   ← Player + Camera
+│   └── ui.tscn                       ← UI overlay
+│
+├── 📜 SCRIPTS (scripts/)
+│   ├── player.gd                     ← Basic player controller
+│   ├── enhanced_player.gd            ← Player with sprint
+│   ├── world_generator.gd            ← Basic world gen
+│   ├── improved_world_generator.gd   ← Advanced world gen
+│   └── game_manager.gd               ← Game state manager
+│
+├── 📖 DOCUMENTATION
+│   ├── START_HERE.md                 ← 👈 START WITH THIS!
+│   ├── README.md                     ← Project overview
+│   ├── QUICKSTART.md                 ← 5-min setup
+│   ├── SETUP_INSTRUCTIONS.md         ← Detailed setup
+│   ├── USER_GUIDE.md                 ← Complete manual
+│   ├── DEVELOPMENT_NOTES.md          ← Technical docs
+│   ├── PROJECT_SUMMARY.md            ← Full overview
+│   ├── README_GAME.md                ← Game info
+│   ├── FILE_CHECKLIST.txt            ← File list
+│   └── PROJECT_TREE.txt              ← This file
+│
+└── 🎨 ASSETS (addons/)
+    └── kaykit_medieval_hexagon_pack/
+        ├── Assets/
+        │   └── gltf/                 ← 200+ 3D Models
+        │       ├── buildings/        ← Houses, taverns, etc
+        │       │   ├── neutral/      ← Non-colored buildings
+        │       │   ├── blue/         ← Blue team buildings
+        │       │   ├── red/          ← Red team buildings
+        │       │   ├── green/        ← Green team buildings
+        │       │   └── yellow/       ← Yellow team buildings
+        │       │
+        │       ├── decoration/       ← Nature & props
+        │       │   ├── nature/       ← Trees, rocks, mountains
+        │       │   └── props/        ← Misc decorations
+        │       │
+        │       └── tiles/            ← Ground tiles
+        │           ├── base/         ← Grass, dirt, stone
+        │           ├── rivers/       ← River tiles
+        │           ├── coast/        ← Coast tiles
+        │           └── roads/        ← Road tiles
+        │
+        ├── Textures/                 ← Texture atlas (1024x1024)
+        ├── Samples/                  ← Sample images
+        ├── LICENSE.txt               ← CC0 License
+        └── Medieval_Hexagon_UserGuide_v1.pdf
+
+
+═══════════════════════════════════════════════
+🚀 QUICK START PATHS
+═══════════════════════════════════════════════
+
+To Play Game:
+1. Open: project.godot in Godot Engine
+2. Press: F5
+3. Enjoy!
+
+To Customize World Size:
+→ scenes/main.tscn
+  → Select: WorldGenerator node
+  → Edit: World Size property
+
+To Customize Player:
+→ scripts/player.gd
+  → Edit: speed, mouse_sensitivity
+
+To Customize Camera:
+→ scenes/player.tscn
+  → Select: Camera3D node
+  → Edit: Transform position
+
+═══════════════════════════════════════════════
+📚 DOCUMENTATION PATHS
+═══════════════════════════════════════════════
+
+First Time:      START_HERE.md
+Quick Setup:     QUICKSTART.md
+Full Manual:     USER_GUIDE.md
+Tech Details:    DEVELOPMENT_NOTES.md
+Overview:        PROJECT_SUMMARY.md
+
+═══════════════════════════════════════════════
+💡 IMPORTANT FILES TO KNOW
+═══════════════════════════════════════════════
+
+🔴 MUST OPEN IN GODOT:
+→ project.godot          (main project file)
+
+🟡 MAIN SCENES:
+→ scenes/main.tscn       (basic version)
+→ scenes/main_improved.tscn (advanced version)
+
+🟢 KEY SCRIPTS:
+→ scripts/player.gd      (movement controls)
+→ scripts/world_generator.gd (world creation)
+
+🔵 READ FIRST:
+→ START_HERE.md          (quick guide)
+
+═══════════════════════════════════════════════
+✅ STATUS: READY TO PLAY!
+═══════════════════════════════════════════════
